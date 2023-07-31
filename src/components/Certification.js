@@ -8,7 +8,7 @@ import { Link } from "react-scroll";
 
 import Img1 from "../assets/java.jpg";
 import Img2 from "../assets/python.jpeg";
-import Img3 from "../assets/portfolio-img3.png";
+import Img3 from "../assets/microsoft.png";
 
 const Certification = () => {
   return (
@@ -92,7 +92,7 @@ const Certification = () => {
                 />
                 {/* pretirle */}
                 <div className="absolute -bottom-full left-9 group-hover:bottom-14 transition-all duration-700 z-50">
-                  <span className="text-gradient">UI/UX Design</span>
+                  <span className="text-gradient">Microsoft Security, Compliance and Identity Fundamentals</span>
                 </div>
                 {/* title */}
                 <div className="absolute -bottom-full left-9 group-hover:bottom-4 transition-all duration-500 z-50">

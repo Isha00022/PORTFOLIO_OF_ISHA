@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 
 import CountUp from "react-countup";
 
@@ -48,31 +49,30 @@ const About = () => {
             <div className="flex gap-x-6 lg:gap-x-10 mb-4 ">
               <div>
                 <div className="text-[35px] font-tertiary text-gradient mb-0.5">
-                {inView ? <CountUp start={0} end={8} duration={3} /> : null}.{inView ? <CountUp start={0} end={8} duration={4} /> : null}
+                  {inView ? <CountUp start={0} end={8} duration={3} /> : null}.
+                  {inView ? <CountUp start={0} end={8} duration={4} /> : null}
                 </div>
-                <div className="font-primary text-sm tracking-[1px]">
-                  CGPA
-                </div>
+                <div className="font-primary text-sm tracking-[1px]">CGPA</div>
               </div>
               <div>
                 <div className="text-[35px] font-tertiary text-gradient mb-0.5">
-                {inView ? <CountUp start={80} end={95} duration={3} /> : null}.{inView ? <CountUp start={0} end={6} duration={3} /> : null}
+                  {inView ? <CountUp start={80} end={95} duration={3} /> : null}
+                  .{inView ? <CountUp start={0} end={6} duration={3} /> : null}
                 </div>
-                <div className="font-primary text-sm tracking-[1px]">
-                  12th
-                </div>
+                <div className="font-primary text-sm tracking-[1px]">12th</div>
               </div>
               <div>
                 <div className="text-[35px] font-tertiary text-gradient mb-0.5">
                   {inView ? <CountUp start={80} end={92} duration={3} /> : null}
                 </div>
-                <div className="font-primary text-sm tracking-[1px]">
-                  10th
-                </div>
+                <div className="font-primary text-sm tracking-[1px]">10th</div>
               </div>
             </div>
             <div className="flex gap-x-8 items-center">
-              <button className="btn btn-sm">Contact me</button>
+              <Link to="contact">
+                <button className="btn btn-sm">Contact me</button>
+              </Link>
+
               <a href="#" className="text-gradient btn-link">
                 My Protfolio
               </a>

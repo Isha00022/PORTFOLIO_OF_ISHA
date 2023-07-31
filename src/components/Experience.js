@@ -8,29 +8,30 @@ import { fadeIn } from "../variants";
 
 const services = [
   {
-    name: "UI/UX Design",
+    name: "Project Trainee-TVS Motor(Design Engineer)",
     description:
-      " Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit cumillum optio expedita laborum eius saepe culpa accusamus maiores",
+      "Developed and deployed encryption and decryption algorithms for secure data communication within automotive systems. Optimized the algorithms, resulting in a reduction of processing time by 9 microseconds. Developed user-friendly GUIs to facilitate software simulation of headlight LEDs in automotive vehicles, simplifying the testing and evaluation process.",
     link: "Learn more",
   },
   {
-    name: "Development",
+    name: "Event Manager in TechnoVIT",
     description:
-      " Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit cumillum optio expedita laborum eius saepe culpa accusamus maiores",
+      " Successfully organized the Aim It Out event during the VIT techfest TechnoVIT, which generated a net revenue of 4,000 INR within a span of 4 hours.",
     link: "Learn more",
   },
   {
-    name: "Digital Marketing",
+    name: "Technical Member of Android Club",
     description:
-      " Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit cumillum optio expedita laborum eius saepe culpa accusamus maiores",
+      " Actively completed assigned tasks that encompassed developing the frontend for Android applications using React Native.",
     link: "Learn more",
   },
   {
-    name: "Digital Marketing",
+    name: "Logistics Member of Fitness Club",
     description:
-      " Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit cumillum optio expedita laborum eius saepe culpa accusamus maiores",
+      " Effectively contributed to managing virtual and in-person events.",
     link: "Learn more",
   },
+
 ];
 
 const Experience = () => {
@@ -50,7 +51,10 @@ const Experience = () => {
               I'm an undergraduate Btech Student persuing my degree in
               Electronics And Communication
             </h3> */}
-            <button className="btn btn-sm">See my work</button>
+            <a href="https://www.linkedin.com/in/isha-gupta-567058204/" target="_blank">
+              <button className="btn btn-sm">My LinkedIn</button>
+            </a>
+            
           </motion.div>
           {/* all the services */}
           <motion.div 
@@ -66,18 +70,18 @@ const Experience = () => {
                 const { name, description, link } = service;
                 return (
                   // <div className='border-b border-white/20 h-[146px] mb-[28px] flex' key={index}>
-                  <div className='border-b border-white/20 h-[120px] mb-[10px] flex' key={index}>
+                  <div className='border-b border-white/20  mb-[10px] flex pb-3' key={index} >
                     <div className="max-w-[476px]">
                       <h4 className="text-[18px] tracking-wider font-primaryfont-semibold mb-2">
                         {name}
                       </h4>
-                      <p className="text-[14px]">{description}</p>
+                      <p className="text-[13px] leading-6">{description}</p>
                     </div>
-                    <div className="text-[14px] flex flex-col flex-1 items-end">
-                      <a href='#' className="btn w-5 h-5 mb-[60px] flex justify-center items-center">
+                    <div className="text-[14px] flex flex-col flex-1 items-end ">
+                      <a href='https://www.linkedin.com/in/isha-gupta-567058204/' target="_blank" className="btn w-5 h-5 mb-[60px] flex justify-center items-center">
                         <BsArrowUpRight/>
                       </a>
-                      <a href='#' className="text-gradient text-sm text-[12px]">
+                      <a href='https://www.linkedin.com/in/isha-gupta-567058204/' target="_blank" className="text-gradient text-sm text-[12px]">
                           {link}
                       </a>
                     </div>

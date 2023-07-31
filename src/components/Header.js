@@ -1,6 +1,7 @@
 import React from "react";
 /////importing images
 import Logo from "../assets/logo.svg";
+import { Link } from "react-scroll";
 
 const Header = () => {
   return (
@@ -9,12 +10,14 @@ const Header = () => {
       <div className="container mx-auto">
         <div className="flex flex-row justify-between">
           {/* inserting logo */}
-          <a href='#'>
+          <a href="#">
             {/* <img src={Logo} alt='' /> */}
             {/* <div className="text-gradient leading-6 text-[23px] font-extrabold"><span>ISHA</span><br/> <span className="text-white/80">GUPTA</span></div> */}
           </a>
           {/* inserting button */}
-          <button className="btn btn-sm">Work with me</button>
+          <a href="mailto:ishagupta8085@gmail.com">
+            <button className="btn btn-sm">Work with me</button>
+          </a>
         </div>
       </div>
     </header>

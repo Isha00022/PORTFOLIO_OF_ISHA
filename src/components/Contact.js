@@ -1,10 +1,34 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 import { motion } from "framer-motion";
 
 import { fadeIn } from "../variants";
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_iftphxw",
+        "template_a1z3zsl",
+        form.current,
+        "sBr10oclAaaVlfsSE"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("messege sent");
+        },
+        (error) => {
+          console.log(error.text);
+          console.log("error");
+        }
+      );
+  };
   return (
     <section className="py-16 lg:section" id="contact">
       <div className="container mx-auto">
@@ -32,24 +56,30 @@ const Contact = () => {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.3 }}
+            ref={form}
+            onSubmit={sendEmail}
             className="flex-1 border rounded-2xl flex flex-col gap-y-6 pb-11 p-6 items-start"
           >
             <input
               className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all"
               type="text"
+              name="user_name"
               placeholder="Your name"
             />
             <input
               className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all"
               type="text"
+              name="user_email"
               placeholder="Your email"
             />
             <textarea
               className="bg-transparent border-b py-5 outline-none w-full placeholder:text-white focus:border-accent transition-all resize-none mb-6"
               type="text"
+              name="message"
               placeholder="Your message"
             ></textarea>
-            <button className="btn btn-lg">Send message</button>
+            {/* <input type="submit" value="Send" /> */}
+            <button className="btn btn-lg" onSubmit={sendEmail}>Send message</button>
           </motion.form>
         </motion.div>
       </div>
